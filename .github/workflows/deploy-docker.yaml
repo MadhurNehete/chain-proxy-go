@@ -5,10 +5,10 @@ env:
 name: Build Docker image & push
 
 on:
-  release:
-    types: [published]
+  push:
+    branches: [ master, rc/*, feat/* ]
   pull_request:
-  workflow_dispatch:
+    branches: [ master, rc/*, feat/* ]
 
 jobs:
   build-docker-image:
